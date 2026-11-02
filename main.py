@@ -13,7 +13,6 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Malaysian District Data Visualisation",
-    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -225,7 +224,7 @@ st.markdown(
     "Exploring **household poverty**, **population demographics** and "
     "**teacher availability** across Malaysian districts."
 )
-st.caption("JIE42403 Scientific Visualisation | Interactive dashboard")
+st.caption("JIE42403 Scientific Visualisation | By Arissa Aida Kamilia Binti Aris (s23a0149)")
 
 states = sorted(set(poverty["state"].dropna()) & set(population["state"].dropna())
                 & set(education["state"].dropna()))
@@ -419,7 +418,7 @@ elif page == "2. Population Distribution":
         ("Age categories", f"{age_count:,}", "Categories in the 2024 age dataset")
     ])
     st.info(
-        "**Data note:** Population values are reported in thousands ('000). "
+        "**Data note:** Population values are reported in thousands. "
         "The overall population total is calculated from `population_total.csv`, "
         "not by adding the age or ethnicity breakdowns."
     )
