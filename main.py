@@ -8,11 +8,10 @@ from pathlib import Path
 
 # ============================================================
 # JIE42403 SCIENTIFIC VISUALISATION
-# Four design pillars: Clarity, Accuracy, Relevance, Aesthetics
 # ============================================================
 
 st.set_page_config(
-    page_title="Malaysian District Data Visualisation",
+    page_title="District-Level Analysis of Poverty, Population Demographics and Teacher Availability in Malaysia",
     layout="wide",
     initial_sidebar_state="expanded"
 )
