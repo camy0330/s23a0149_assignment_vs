@@ -240,12 +240,11 @@ def metric_row(items):
 
 # -------------------- Header and navigation --------------------
 
-st.title("Malaysian District Data Visualisation")
+st.title("District-Level Analysis of Poverty, Population Demographics and Teacher Availability in Malaysia")
 st.markdown(
-    "Exploring **household poverty**, **population demographics** and "
-    "**teacher availability** across Malaysian districts."
+    "Exploring household poverty patterns, demographic characteristics and population-adjusted teacher availability across Malaysian districts."
 )
-st.caption("JIE42403 Scientific Visualisation | By Arissa Aida Kamilia Binti Aris (s23a0149)")
+st.caption("JIE42403 Scientific Visualisation | By Arissa Aida Kamilia Binti Aris (S23A0149)")
 
 states = sorted(set(poverty["state"].dropna()) & set(population["state"].dropna())
                 & set(education["state"].dropna()))
