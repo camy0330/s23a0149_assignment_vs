@@ -120,35 +120,102 @@ for df, cols in [
 
 # -------------------- Chart helpers --------------------
 
+
 def apply_style(fig, height=520):
     fig.update_layout(
         template="plotly_white",
         height=height,
-        font=dict(family="Arial, sans-serif", size=12, color=PALETTE["ink"]),
-        title=dict(font=dict(size=19, color=PALETTE["navy"]), x=0.02, xanchor="left"),
-        paper_bgcolor=PALETTE["white"],
-        plot_bgcolor=PALETTE["white"],
-        margin=dict(l=65, r=55, t=125, b=90),
-        hoverlabel=dict(bgcolor="white", bordercolor=PALETTE["slate"],
-                        font=dict(color=PALETTE["ink"], size=12)),
+        font=dict(
+            family="Arial, sans-serif",
+            size=13,
+            color="#263442"
+        ),
+        title=dict(
+            font=dict(size=20, color="#24445C"),
+            x=0.02,
+            xanchor="left"
+        ),
+        paper_bgcolor="#FFFFFF",
+        plot_bgcolor="#FFFFFF",
+
+        margin=dict(l=75, r=65, t=125, b=95),
+
+        hoverlabel=dict(
+            bgcolor="#FFFFFF",
+            bordercolor="#8795A5",
+            font=dict(color="#263442", size=13)
+        ),
+
         legend=dict(
-            orientation="h", yanchor="bottom", y=1.08,
-            xanchor="left", x=0, title_text="",
+            orientation="h",
+            yanchor="bottom",
+            y=1.08,
+            xanchor="left",
+            x=0,
+            title_text="",
+            font=dict(size=12, color="#263442"),
             tracegroupgap=8
         ),
+
         hovermode="closest"
     )
+
+    # X-axis: clearer labels, title and gridlines
     fig.update_xaxes(
-        showline=True, linecolor=PALETTE["slate"], linewidth=1,
-        showgrid=False, zeroline=False, automargin=True,
-        title_font=dict(size=13), tickfont=dict(size=11)
+        showline=True,
+        linecolor="#64748B",
+        linewidth=1.4,
+
+        showgrid=True,
+        gridcolor="#D5DDE6",
+        gridwidth=1,
+
+        zeroline=False,
+        automargin=True,
+
+        title_font=dict(
+            size=14,
+            color="#263442"
+        ),
+
+        tickfont=dict(
+            size=12,
+            color="#34495E"
+        ),
+
+        ticks="outside",
+        tickcolor="#64748B"
     )
+
+    # Y-axis: clearer category labels and gridlines
     fig.update_yaxes(
-        showline=False, showgrid=True, gridcolor=PALETTE["grid"],
-        gridwidth=1, zeroline=False, automargin=True,
-        title_font=dict(size=13), tickfont=dict(size=11)
+        showline=True,
+        linecolor="#64748B",
+        linewidth=1.2,
+
+        showgrid=True,
+        gridcolor="#D5DDE6",
+        gridwidth=1,
+
+        zeroline=False,
+        automargin=True,
+
+        title_font=dict(
+            size=14,
+            color="#263442"
+        ),
+
+        tickfont=dict(
+            size=12,
+            color="#34495E"
+        ),
+
+        ticks="outside",
+        tickcolor="#64748B"
     )
+
     return fig
+
 
 
 def show_chart(fig, key, height=520):
