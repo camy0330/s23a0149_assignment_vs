@@ -12,7 +12,6 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Malaysian District Data Visualisation",
-    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -209,8 +208,8 @@ def metric_row(items):
 
 st.title("Malaysian District Data Visualisation")
 st.markdown(
-    "Exploring **household poverty**, **population demographics** and "
-    "**teacher availability** across Malaysian districts."
+    "Exploring household poverty, population demographics and "
+    "teacher availability across Malaysian districts."
 )
 st.caption("JIE42403 Scientific Visualisation | Interactive dashboard")
 
@@ -229,8 +228,6 @@ with st.sidebar:
     selected_states = st.multiselect("Filter by state", states, default=states)
     st.caption("All summary values and charts respond to this state filter.")
     st.divider()
-    st.markdown("**Visualisation principles**")
-    st.caption("Clarity · Accuracy · Relevance · Aesthetics")
 
 if not selected_states:
     st.warning("Select at least one state from the sidebar to display the analysis.")
